@@ -2,6 +2,16 @@
 <html>
 <head>
   <meta charset="UTF-8" />
+  <style>
+    .subject-heading {
+      background-color: blue;
+      color: lightgray;
+    }
+    .code-insert {
+      background-color: lightgray;
+      color: red;
+    }
+  </style>
   <title>Git Bisect Demo!</title>
 </head>
 <body>
@@ -10,7 +20,7 @@
     width: 90vw;"
   >
     <h1>Git Bisect</h1>
-    <h2 style="background-color:blue; color: lightgray">What is Git Bisect and how to use it? - I should have Blue background btw!</h2>
+    <h2 style="background-color:red;" class="subject-heading">What is Git Bisect and how to use it? - I should have Blue background btw!</h2>
     <div id="content-div">
       <section id="intro-section">
         <h3>What is Git Bisect?</h3>
@@ -19,9 +29,9 @@
       <section id="how-to-section">
         <h3>How to use Git Bisect?</h3>
         <div>
-          <p>To start the git bisect process use the command <span>git-bisect start</span></p>
+          <p>To start the git bisect process use the command <span class="code-insert">git-bisect start</span></p>
           <p>For it to really start we need to provide two more pieces of information to git, a <span>bad</span> commit and a <span>good</span> commit.</p>
-          <p>To do that we simply do <span>git bisect bad *bad commit identifier*</span> and then <span>git bisect good *good commit identifier*</span></p>
+          <p>To do that we simply do <span class="code-insert">git bisect bad *bad commit identifier*</span> and then <span class="code-insert">git bisect good *good commit identifier*</span></p>
         </div>
       </section>
       <a href="https://git-scm.com/docs/git-bisect">If you need more info, checkout the Documentation!</a>
