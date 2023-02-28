@@ -17,6 +17,17 @@
       padding: 5px;
       border-radius: 5px;
     }
+    .good-span {
+      color: green;
+      font-weight: bold;
+    }
+    .bad-span {
+      color: darkred;
+      font-weight: bold;;
+    }
+    .warning {
+      background-color: yellow;
+    }
   </style>
   <title>Git Bisect Demo!</title>
 </head>
@@ -35,9 +46,13 @@
       <section id="how-to-section">
         <h3>How to use Git Bisect?</h3>
         <div>
+          <p class="warning">Before we start, we're gonna be checking out a lot of commits, so it's best to commit or stash any changes before we begin!</p>
           <p>To start the git bisect process use the command <span class="code-insert">git-bisect start</span></p>
-          <p>For it to really start we need to provide two more pieces of information to git, a <span>bad</span> commit and a <span>good</span> commit.</p>
-          <p>To do that we simply do <span class="code-insert">git bisect bad <strong>bad-commit-identifier</strong></span> and then <span class="code-insert">git bisect good <strong>good-commit-identifier</strong></span></p>
+          <p>For it to really start we need to provide two more pieces of information to git, a <span class="bad-span">bad</span> commit and a <span class="good-span">good</span> commit.</p>
+          <p>To do that we simply do <span class="code-insert">git bisect bad <strong>BAD-COMMIT-IDENTIFIER</strong></span> and then <span class="code-insert">git bisect good <strong>GOOD-COMMIT-IDENTIFIER</strong></span></p>
+          <p>A commit identifier is, as the name implies, something to identify the commit you're referencing. Usually this is the commit hash, but it could also be a tag, or if you want to flag the current commit as either good or bad you can omit the identifier</p>
+          <p>Once you started git bisect and gave it a <span class="good-span">good</span> and a <span class="bad-span">bad</span> commit, git will start working for you.</p>
+          <p>It'll then check us out to a commit between the ones we flagged as <span class="good-span">good</span> and <span class="bad-span">bad</span>. We then should check this commit for the behavior we're looking for and mark this one too as <span class="good-span">good</span> or <span class="bad-span">bad</span> with the corresponding command, either  <span class="code-insert">git bisect good</span> or <span class="code-insert">git bisect bad</span> accordingly.</p>
         </div>
       </section>
       <a href="https://git-scm.com/docs/git-bisect">If you need more info, checkout the Documentation!</a>
