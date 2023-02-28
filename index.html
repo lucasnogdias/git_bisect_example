@@ -3,6 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <style>
+    div {
+      font-size: 1.2rem;
+    }
+
     .subject-heading {
       background-color: blue;
       color: lightgray;
@@ -10,6 +14,8 @@
     .code-insert {
       background-color: lightgray;
       color: red;
+      padding: 5px;
+      border-radius: 5px;
     }
   </style>
   <title>Git Bisect Demo!</title>
@@ -31,7 +37,7 @@
         <div>
           <p>To start the git bisect process use the command <span class="code-insert">git-bisect start</span></p>
           <p>For it to really start we need to provide two more pieces of information to git, a <span>bad</span> commit and a <span>good</span> commit.</p>
-          <p>To do that we simply do <span class="code-insert">git bisect bad *bad commit identifier*</span> and then <span class="code-insert">git bisect good *good commit identifier*</span></p>
+          <p>To do that we simply do <span class="code-insert">git bisect bad <strong>bad-commit-identifier</strong></span> and then <span class="code-insert">git bisect good <strong>good-commit-identifier</strong></span></p>
         </div>
       </section>
       <a href="https://git-scm.com/docs/git-bisect">If you need more info, checkout the Documentation!</a>
