@@ -46,8 +46,11 @@
         <p>So if you have an undesired behavior or a bug now, but you know that this was correct in the past, you can use git bisect to help you find the exact commit the issue began, which often makes it easier to find and fix the problem</p>
         <p>As i mentioned, Git Bisect uses a binary search algorithm to find the problem commit, after you indicate a <span class="bad-span">bad</span> and a <span class="good-span">good</span> commit, it will checkout a commit exactly in the middle of those two and then ask you to flag this checked out commit as either <span class="bad-span">bad</span> or <span class="good-span">good</span>, depending if the bug still happens at this point or not.</p>
         <p>It will then pass to the next step, which is finding a new commit between the most recent commit flagged as <span class="good-span">good</span> and the most recent flagged as <span class="bad-span">bad</span> and it will repeat this steps until we get to the specific commit that introduced the bug.</p>
-        <img src="./placeholder.png" />
-        <img src="./placeholder.png" />
+        <img src="./step1.png" />
+        <img src="./step2.png" />
+        <img src="./step3.png" />
+        <img src="./step4.png" />
+        <img src="./step_final.png" />
       </section>
       <section id="how-to-section">
         <h3>How to use Git Bisect?</h3>
