@@ -43,7 +43,9 @@
         <h3>What is Git Bisect?</h3>
         <p>Git bisect allows you to use binary search on your project commits to find a specific commit where a problem started!</p>
         <p>Sometimes it can be difficult to find the root of a bug when looking at the whole project, however if we can find the commit where the bug was introduced it usually can give you a better idea of what is wrong, and limits the amount of code you need to investigate to get to the issue.</p>
-        <p>So if you have an undesired behavior or a bug now, but you know that this was correct in the past, you can use git bisect to help you find the exact commit the issue began, which often makes it easier to find and correct the issue</p>
+        <p>So if you have an undesired behavior or a bug now, but you know that this was correct in the past, you can use git bisect to help you find the exact commit the issue began, which often makes it easier to find and fix the problem</p>
+        <p>As i mentioned, Git Bisect uses a binary search algorithm to find the problem commit, after you indicate a <span class="bad-span">bad</span> and a <span class="good-span">good</span> commit, it will checkout a commit exactly in the middle of those two and then ask you to flag this checked out commit as either <span class="bad-span">bad</span> or <span class="good-span">good</span>, depending if the bug still happens at this point or not.</p>
+        <p>It will then pass to the next step, which is finding a new commit between the most recent commit flagged as <span class="good-span">good</span> and the most recent flagged as <span class="bad-span">bad</span> and it will repeat this steps until we get to the specific commit that introduced the bug.</p>
       </section>
       <section id="how-to-section">
         <h3>How to use Git Bisect?</h3>
@@ -57,7 +59,12 @@
           <p>It'll then check us out to a commit between the ones we flagged as <span class="good-span">good</span> and <span class="bad-span">bad</span>. We then should check this commit for the behavior we're looking for and mark this one too as <span class="good-span">good</span> or <span class="bad-span">bad</span> with the corresponding command, either  <span class="code-insert">git bisect good</span> or <span class="code-insert">git bisect bad</span> accordingly.</p>
         </div>
       </section>
-      <a href="https://git-scm.com/docs/git-bisect">If you need more info, checkout the Documentation!</a>
+            <section id="questions-section">
+        <h3>Any questions?</h3>
+        <div>
+          <p>If you need more info latter you can also check the <a href="https://git-scm.com/docs/git-bisect">Git Bisect Documentation</a>!</p>
+        </div>
+      </section>
     </div>
   </main>
 </body>
